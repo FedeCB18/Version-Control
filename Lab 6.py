@@ -8,6 +8,15 @@ def encode(num):
     res = ''.join(map(str, val))
     return res
 
+def decode(password:list):
+    decode = ''
+    for i in password:
+        if int(i) < 3:
+            i = (10 + int(i)) - 3
+        else:
+            i = int(i) - 3
+        decode += str(i)
+    return decode
 
 if __name__ == "__main__":
     while True:
