@@ -19,7 +19,10 @@ if __name__ == "__main__":
             num = encode(numb)
             print('You password has been encoded and stored!')
         elif inpt == 2:
-            print("The encoded password is", encode(numb), end=',')
-            print(' and the original password is', str(numb), end='.\n\n')
+            try: 
+                 print("The encoded password is", encode(numb), end=',')
+                 print(' and the original password is', str(numb), end='.\n\n')
+            except:
+                 print("Please encode a password first before decoding.")
         elif inpt == 3:
             exit()
